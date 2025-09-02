@@ -137,14 +137,59 @@
         </div>
       </div>
     </section><!-- /Hero Section -->
-<!-- CTA Buttons -->
-<div class="cta-buttons d-flex flex-wrap gap-3">
-  <a href="#" class="btn btn-primary" onclick="redirectToBuyNow(event)">Buy Now</a>
-  <a href="#" class="btn btn-outline" onclick="redirectToWhatsApp(event)">More Details</a>
-</div>
+<!-- Call To Action Section -->
+<section id="call-to-action" class="call-to-action section light-background">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
+    <div class="advertise-1 d-flex flex-column flex-lg-row gap-4 align-items-center position-relative">
+
+      <!-- LEFT CONTENT -->
+      <div class="content-left flex-grow-1" data-aos="fade-right" data-aos-delay="200">
+        <span class="badge text-uppercase mb-2">Don't Miss!</span>
+        <h2>Buy TikTok Monetized Account – Start Earning Without Delay!</h2>
+        <p class="my-4">
+          Get your identity-verified, fully monetized TikTok account and start earning from day one. These accounts are 100% safe, secure, and ready to use — with monetization already enabled for instant income. With complete ownership transfer, you can instantly generate earning without waiting months to qualify.
+        </p>
+
+        <!-- Features -->
+        <div class="features d-flex flex-wrap gap-3 mb-4">
+          <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>Verified & Organic</span></div>
+          <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>Instant Access</span></div>
+          <div class="feature-item"><i class="bi bi-check-circle-fill"></i><span>Full Ownership Transfer</span></div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons d-flex flex-wrap gap-3">
+          <a href="#" class="btn btn-primary">Buy Now</a>
+          <a href="#" class="btn btn-outline" onclick="redirectToWhatsApp(event)">More Details</a>
+        </div>
+      </div>
+
+      <!-- RIGHT CONTENT (Image + Card) -->
+      <div class="content-right flex-shrink-0 text-center text-lg-end" data-aos="fade-left" data-aos-delay="300" style="max-width: 450px;">
+        <img src="assets/img/misc/Generated Image September 02, 2025 - 4_31AM.jpeg" alt="Digital Platform" class="img-fluid rounded-4">
+        <div class="floating-card">
+          <div class="card-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="card-content">
+            <span class="stats-number">245%</span>
+            <span class="stats-text">Growth Rate</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Decoration -->
+      <div class="decoration">
+        <div class="circle-1"></div>
+        <div class="circle-2"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Popup Script -->
 <script>
-function redirectToBuyNow(event) {
+function redirectToWhatsApp(event) {
   event.preventDefault();
 
   // Overlay
@@ -154,27 +199,40 @@ function redirectToBuyNow(event) {
   overlay.style.left = "0";
   overlay.style.width = "100%";
   overlay.style.height = "100%";
-  overlay.style.background = "rgba(0,0,0,0.85)";
-  overlay.style.backdropFilter = "blur(8px)";
+  overlay.style.background = "rgba(0,0,0,0.8)";
+  overlay.style.backdropFilter = "blur(6px)";
   overlay.style.display = "flex";
   overlay.style.alignItems = "center";
   overlay.style.justifyContent = "center";
   overlay.style.zIndex = "9999";
 
-  // Message Box
-  var box = document.createElement("div");
-  box.style.position = "relative";
-  box.style.background = "linear-gradient(135deg, #fff, #f9f9f9)";
-  box.style.padding = "40px 30px";
-  box.style.borderRadius = "18px";
-  box.style.textAlign = "center";
-  box.style.fontFamily = "Arial, sans-serif";
-  box.style.boxShadow = "0 0 30px rgba(0,150,136,0.6), 0 0 50px rgba(0,188,212,0.5)";
-  box.style.transform = "scale(0.8)";
-  box.style.opacity = "0";
-  box.style.transition = "all 0.4s ease";
+  // Message box
+  var messageBox = document.createElement("div");
+  messageBox.style.position = "relative";
+  messageBox.style.background = "linear-gradient(145deg, #ffffff, #f1f1f1)";
+  messageBox.style.padding = "35px";
+  messageBox.style.borderRadius = "16px";
+  messageBox.style.textAlign = "center";
+  messageBox.style.fontFamily = "Arial, sans-serif";
+  messageBox.style.boxShadow = "0 0 25px rgba(214,66,55,0.7), 0 0 40px rgba(229,157,2,0.6)";
+  messageBox.style.overflow = "hidden";
+  messageBox.style.transform = "scale(0.8)";
+  messageBox.style.opacity = "0";
+  messageBox.style.transition = "all 0.4s ease";
 
-  // Close Button
+  // Glow effect
+  var glow = document.createElement("div");
+  glow.style.position = "absolute";
+  glow.style.top = "-50%";
+  glow.style.left = "-50%";
+  glow.style.width = "200%";
+  glow.style.height = "200%";
+  glow.style.background = "radial-gradient(circle at center, rgba(229,157,2,0.25), transparent 60%)";
+  glow.style.transform = "rotate(25deg)";
+  glow.style.pointerEvents = "none";
+  messageBox.appendChild(glow);
+
+  // Close button
   var closeBtn = document.createElement("span");
   closeBtn.innerHTML = "✖";
   closeBtn.style.position = "absolute";
@@ -182,37 +240,37 @@ function redirectToBuyNow(event) {
   closeBtn.style.right = "15px";
   closeBtn.style.cursor = "pointer";
   closeBtn.style.fontSize = "20px";
-  closeBtn.style.color = "#009688";
+  closeBtn.style.color = "#d64237";
   closeBtn.onclick = function() { document.body.removeChild(overlay); };
-  box.appendChild(closeBtn);
+  messageBox.appendChild(closeBtn);
 
-  // Content
+  // Text content
   var content = document.createElement("div");
   content.innerHTML = `
-    <h2 style="margin-bottom:12px; color:#111;">🎉 Great Choice!</h2>
-    <p style="color:#333; font-size:16px;">
-      You're being redirected to WhatsApp to complete your purchase. 🚀
+    <h2 style="margin-bottom:10px; color:#222;">✅ Thank you for your interest!</h2>
+    <p style="color:#444; font-size:16px;">
+      You will be redirected to WhatsApp shortly for a better experience.
     </p>
   `;
-  box.appendChild(content);
+  messageBox.appendChild(content);
 
-  overlay.appendChild(box);
+  overlay.appendChild(messageBox);
   document.body.appendChild(overlay);
 
   // Animate popup
   setTimeout(() => {
-    box.style.transform = "scale(1)";
-    box.style.opacity = "1";
+    messageBox.style.transform = "scale(1)";
+    messageBox.style.opacity = "1";
   }, 50);
 
-  // WhatsApp Redirect (different message for Buy Now)
+  // WhatsApp redirect
   var phoneNumber = "923162045631";
-  var message = "Hi! I want to BUY a TikTok Monetized Account. Please guide me through the process.";
+  var message = "Hello! I am interested in your TikTok Monetized Accounts. Please share more details.";
   var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
 
   setTimeout(function() {
     window.location.href = url;
-  }, 2200);
+  }, 2500);
 }
 </script>
 
