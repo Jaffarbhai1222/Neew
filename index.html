@@ -310,53 +310,6 @@
    Buy Now!
 </a>
 
-<script>
-function redirectToWhatsApp(event) {
-    event.preventDefault();
-
-    // Create overlay for thank you message
-    var overlay = document.createElement("div");
-    overlay.style.position = "fixed";
-    overlay.style.top = "0";
-    overlay.style.left = "0";
-    overlay.style.width = "100%";
-    overlay.style.height = "100%";
-    overlay.style.backgroundColor = "rgba(0,0,0,0.7)";
-    overlay.style.display = "flex";
-    overlay.style.alignItems = "center";
-    overlay.style.justifyContent = "center";
-    overlay.style.zIndex = "9999";
-
-    // Message box
-    var messageBox = document.createElement("div");
-    messageBox.style.background = "#fff";
-    messageBox.style.padding = "30px";
-    messageBox.style.borderRadius = "12px";
-    messageBox.style.textAlign = "center";
-    messageBox.style.fontFamily = "Arial, sans-serif";
-    messageBox.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
-    messageBox.innerHTML = `
-        <h2 style="margin-bottom:10px; color:#333;">✅ Thank you for your interest!</h2>
-        <p style="color:#555; font-size:16px;">
-          You will be redirected to WhatsApp shortly for a better experience.
-        </p>
-    `;
-
-    overlay.appendChild(messageBox);
-    document.body.appendChild(overlay);
-
-    // WhatsApp redirect after delay
-    var phoneNumber = "923162045631"; // With country code
-    var message = "Hello! I am interested in your TikTok Monetized Accounts. Please share more details.";
-    var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
-
-    setTimeout(function() {
-        window.location.href = url;
-    }, 2500); // 2.5 sec delay
-}
-</script>
-            </div>
-          </div>
 <a href="#" 
    class="btn btn-outline" 
    onclick="redirectToWhatsApp(event)">
