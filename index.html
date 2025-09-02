@@ -1225,7 +1225,7 @@ function redirectToWhatsApp(event) {
 
     </section><!-- /Stats Section -->
 
- <!-- Pricing Section -->
+<!-- Pricing Section -->
 <section id="pricing" class="pricing section">
 
   <!-- Section Title -->
@@ -1264,7 +1264,7 @@ function redirectToWhatsApp(event) {
             </ul>
           </div>
           <div class="plan-cta">
-            <a href="#" class="btn-plan" onclick="openPopup('TikTok Monetization')">Get Started</a>
+            <a href="#" class="btn-plan" onclick="openPopup('TikTok Monetization')">Buy Now</a>
           </div>
         </div>
       </div><!-- End Basic Plan -->
@@ -1297,7 +1297,7 @@ function redirectToWhatsApp(event) {
             </ul>
           </div>
           <div class="plan-cta">
-            <a href="#" class="btn-plan" onclick="openPopup('YouTube Monetization + AdSense')">Choose Plan</a>
+            <a href="#" class="btn-plan" onclick="openPopup('YouTube Monetization + AdSense')">Buy Now</a>
           </div>
         </div>
       </div><!-- End Professional Plan -->
@@ -1344,8 +1344,10 @@ function redirectToWhatsApp(event) {
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <h3>🎉 You’ve made a smart choice!</h3>
-    <p id="popup-text"></p>
+    <p id="popup-text" style="color:red; font-weight:bold;"></p>
     <a id="whatsapp-link" class="btn-plan" target="_blank">Forward to WhatsApp</a>
+    <br><br>
+    <button onclick="closePopup()" class="btn-cancel">Cancel</button>
   </div>
 </div>
 
@@ -1378,6 +1380,24 @@ function redirectToWhatsApp(event) {
   font-size: 22px;
   cursor: pointer;
 }
+.btn-plan {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #28a745;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-plan:hover { background: #218838; }
+.btn-cancel {
+  padding: 8px 16px;
+  background: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.btn-cancel:hover { background: #b52a37; }
 </style>
 
 <!-- JS -->
